@@ -1,5 +1,5 @@
 import "../styles/ProductCard.css"
-
+import { Link } from "react-router-dom"
 export default function ProductCard({ product }) {
 
   return (
@@ -15,18 +15,12 @@ export default function ProductCard({ product }) {
         {product.name}
       </h3>
 
-      <p className="product-description">
-        {product.description}
-      </p>
-
-      <a
-        href={product.link}
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        to={`/product/${product.slug}`}
         className="product-button"
       >
-        View Product
-      </a>
+        View Details
+      </Link>
 
     </div>
   )

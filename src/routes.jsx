@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import Products from "./pages/Products"
 import AboutContact from "./pages/AboutContact"
+import ProductDetail from "./pages/ProductDetail"
 
 export default function RoutesFile() {
   return (
@@ -14,6 +15,8 @@ export default function RoutesFile() {
       <Route path="/products/category/:category" element={<Products />} />
 
       <Route path="/about" element={<AboutContact />} />
+
+      <Route path="/product/:slug" element={<ProductDetail />} />
 
     </Routes>
   )
