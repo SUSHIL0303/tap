@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=/tap/" />
-  </head>
-  <body></body>
+<head>
+<script>
+  var path = window.location.pathname;
+  window.location.replace("/tap/?p=" + path.replace("/tap",""));
+</script>
+</head>
+<body></body>
 </html>
