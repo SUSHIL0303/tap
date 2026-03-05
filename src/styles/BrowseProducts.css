@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.browse-all-products-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.browse-product-container h1{
+    color: white;
+}
+
+.browse-product-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.browse-all-button{
+    background-color: #999999;
+    outline: none;
+    border: none;
+    padding: 15px;
+    border-radius: 9px;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:1024px){
+
+  .browse-all-products-wrapper{
+    padding:40px 20px;
+    text-align:center;
+  }
+
+  .browse-product-container h1{
+    font-size:28px;
+  }
+
+  .browse-all-button{
+    padding:13px 22px;
+    font-size:15px;
+  }
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:600px){
+
+  .browse-all-products-wrapper{
+    padding:30px 15px;
+    text-align:center;
+  }
+
+  .browse-product-container h1{
+    font-size:22px;
+    line-height:1.4;
+  }
+
+  .browse-all-button{
+    padding:12px 18px;
+    font-size:14px;
+  }
+
+}

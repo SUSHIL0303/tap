@@ -1,0 +1,11 @@
+.Home{
+    width: 100%;
+}
+
+
+@media (max-width:600px){
+    .home{
+        max-width: 100vw;
+    }
+
+}

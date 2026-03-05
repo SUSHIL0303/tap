@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+.about-contact-page{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#f8f8f8;
+font-family:"Roboto",sans-serif;
+flex-direction: column;
+}
+
+.panel-container{
+display:flex;
+width:80%;
+height:70vh;
+border:2px solid black;
+overflow:hidden;
+}
+
+/* PANELS */
+
+.panel{
+position:relative;
+transition:all 0.4s ease;
+cursor:pointer;
+display:flex;
+flex-direction:column;
+background:white;
+}
+
+/* EXPANDED */
+
+.panel.active{
+flex:4;
+padding:40px;
+}
+
+/* SHRINKED */
+
+.panel.collapsed{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* HEADER */
+
+.panel-header{
+position:absolute;
+top:20px;
+left:20px;
+display:flex;
+align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:bold;
+justify-content: center;
+}
+
+/* ARROW */
+
+.arrow{
+font-size:22px;
+}
+
+/* CONTENT */
+
+.panel-content{
+margin-top:60px;
+line-height:1.6;
+}
+
+.panel-content p{
+    text-align: justify;
+}
+
+/* HIDE CONTENT WHEN COLLAPSED */
+
+.panel.collapsed .panel-content{
+display:none;
+}
+
+/* VERTICAL TITLE */
+
+.panel.collapsed .panel-title{
+writing-mode:vertical-rl;
+transform:rotate(180deg);
+font-size:20px;
+text-align:center;
+}
+
+.panel.collapsed .panel-header{
+    position:static;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100%;
+    width:100%;
+}
+
+/* hide vertical title when panel is expanded */
+
+.panel.active .panel-title{
+display:none;
+}
+
+/* show title only when collapsed */
+
+.panel.collapsed .panel-title{
+display:block;
+writing-mode:vertical-rl;
+transform:rotate(180deg);
+font-size:20px;
+text-align:center;
+}
+
+/* center the title in collapsed panel */
+
+.panel.collapsed .panel-header{
+position:static;
+display:flex;
+align-items:center;
+justify-content:center;
+height:100%;
+width:100%;
+}
+
+/* hide title and arrow when panel is expanded */
+
+.panel.active .panel-title,
+.panel.active .arrow{
+display:none;
+}
+
+/* show title and arrow when collapsed */
+
+.panel.collapsed .panel-title,
+.panel.collapsed .arrow{
+display:block;
+}
+
+/* Contact panel background */
+
+.panel.contact{
+    background:black;
+    color:white;
+}
+
+/* links / text inside contact */
+
+.panel.contact p,
+.panel.contact h2,
+.panel.contact strong{
+    color:white;
+}
+
+.return-button{
+    background-color: black;
+    margin-top: 30px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: solid;
+}
+
+
+@media (max-width:600px){
+
+.about-contact-page{
+height:auto;
+padding:40px 0;
+}
+
+.panel-container{
+flex-direction:column;
+width:90%;
+height:auto;
+}
+
+/* make panels normal blocks */
+
+.panel,
+.panel.active,
+.panel.collapsed{
+flex:none;
+padding:30px;
+cursor:default;
+}
+
+/* hide header completely */
+
+.panel-header{
+display:none !important;
+}
+
+/* hide vertical title and arrow */
+
+.panel-title,
+.arrow{
+display:none !important;
+}
+
+/* always show content */
+
+.panel-content{
+display:block;
+margin-top:0;
+}
+
+.panel.collapsed .panel-content{
+display:block;
+}
+
+}

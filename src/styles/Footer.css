@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+*{
+    margin: 0;
+}
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    padding: 50px
+    
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    /* align-items: center; */
+    
+}
+
+.website-info{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.footer-content div:nth-child(1){
+    flex: 2;
+}
+
+.footer-content div:nth-child(2),
+.footer-content div:nth-child(3){
+    flex: 1;
+}
+
+.associate-msg{
+    font-family: "Roboto", sans-serif;
+    color: #999999;
+    margin-top: 20px;
+}
+
+.footer-wrapper h4{
+    font-family: "Roboto", sans-serif;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.info-wrapper p{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-family: "Roboto", sans-serif;
+}
+
+.quick-links-wrapper p{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+.quick-links-wrapper a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.info-wrapper a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.website-info-wrapper h1{
+    color: #1e35ff;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+    
+/* ---------- Tablet ---------- */
+
+@media (max-width:1024px){
+
+  .footer-content{
+    width:90%;
+    gap:30px;
+  }
+
+  .website-info{
+    font-size:14px;
+  }
+
+  .footer-wrapper h4{
+    font-size:16px;
+  }
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:600px){
+
+  .footer-wrapper{
+    padding:40px 20px;
+  }
+
+  .footer-content{
+    flex-direction:column;
+    gap:25px;
+    width:100%;
+  }
+
+  .footer-content div:nth-child(1),
+  .footer-content div:nth-child(2),
+  .footer-content div:nth-child(3){
+    flex:none;
+  }
+
+  .website-info-wrapper h1{
+    font-size:22px;
+    letter-spacing:5px;
+  }
+
+  .website-info{
+    font-size:14px;
+    text-align:left;
+  }
+
+  .info-wrapper p,
+  .quick-links-wrapper p{
+    font-size:14px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .associate-msg p{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+  }
+
+}
