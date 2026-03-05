@@ -11,7 +11,8 @@ export default function TextLoop() {
     ".",
     "Hidden Storage Matters",
     ".",
-    "Double Your Closet Space"
+    "Double Your Closet Space",
+    "."
   ]
 
   return (
