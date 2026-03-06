@@ -62,75 +62,81 @@ return <div className="product-detail-message">Product not found</div>
 
 return(
 
-<div className="product-detail-page">
+  <div className="product-detail-page">
 
-<Navbar/>
+    <Navbar/>
 
-<div className="product-detail-container">
+    <div className="product-detail-container">
 
-<img
-src={product.image}
-alt={product.name}
-className="product-detail-image"
-/>
+    <div className="product-detail-image-container">
+      <img
+      src={product.image}
+      alt={product.name}
+      className="product-detail-image"
+      />
+    </div>
+    
 
-<div className="product-detail-info">
+    <div className="product-detail-info">
 
-<h1>{product.name}</h1>
+    <div>
+  <h1>{product.name}</h1>
 
-<p>{product.description}</p>
+    <ul>
+      {product.description.split(".").filter(Boolean).map((item, index) => (
+        <li key={index}>{item.trim()}</li>
+      ))}
+    </ul>
+  </div>
+    
+    <div>
+      <a
+        href={product.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="buy-button"
+        >
+        Buy on Amazon
+        </a>
+    </div>
+    
 
-<a
-href={product.link}
-target="_blank"
-rel="noopener noreferrer"
-className="buy-button"
->
-Buy on Amazon
-</a>
+    </div>
 
-</div>
+    </div>
+    <div className="product-detail-page">
 
-</div>
-<div className="product-detail-page">
+    <Navbar/>
 
-<Navbar/>
+    {/* RELATED PRODUCTS */}
+    {related.length > 0 && (
 
-<div className="product-detail-container">
-  ...
-</div>
+    <div className="related-section">
 
-{/* RELATED PRODUCTS */}
-{related.length > 0 && (
+    <h2 className="related-title" >You may also like</h2>
 
-<div className="related-section">
+    <div className="related-grid">
 
-<h2 className="related-title">You may also like</h2>
+    {related.map(product => (
 
-<div className="related-grid">
+    <ProductCard
+    key={product.id}
+    product={product}
+    />
 
-{related.map(product => (
+    ))}
 
-<ProductCard
-key={product.id}
-product={product}
-/>
+    </div>
 
-))}
+    </div>
 
-</div>
+    )}
 
-</div>
+    <Footer/>
 
-)}
+    </div>
 
-<Footer/>
-
-</div>
-
-<Footer/>
-
-</div>
+  </div>
 
 )
 
