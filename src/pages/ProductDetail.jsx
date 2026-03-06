@@ -84,7 +84,7 @@ return(
 
     <ul>
       {product.description.split(".").filter(Boolean).map((item, index) => (
-        <li key={index}>{item.trim()}</li>
+        <li style={{textAlign:"justify"}} key={index}>{item.trim()}</li>
       ))}
     </ul>
   </div>
