@@ -96,7 +96,7 @@ return(
         rel="noopener noreferrer"
         className="buy-button"
         >
-        Buy on Amazon
+        Buy Now
         </a>
     </div>
     
